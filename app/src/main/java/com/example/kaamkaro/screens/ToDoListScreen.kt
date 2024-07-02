@@ -50,13 +50,13 @@ fun ToDoListScreen(toDoViewModel: ToDoViewModel = viewModel()) {
         } else {
             LazyColumn(modifier = Modifier.fillMaxHeight()) {
                 items(toDoViewModel.getTasks()) {
-                    Log.e("ToDoList", " + it.isCompleted")
+                    Log.e("todoList", "" + it.isComplete)
 
                     Card(
                         colors = CardDefaults.cardColors(Color.Gray),
                         shape = RoundedCornerShape(20.dp),
-                        elevation = CardDefaults.cardElevation(5.dp),
-                        modifier = Modifier.padding(5.dp)
+                        elevation = CardDefaults.cardElevation(1.dp),
+                        modifier = Modifier.padding(top = 63.dp, start = 3.dp, end = 3.dp)
                     ) {
 
                         Row(modifier = Modifier.padding(20.dp)) {

@@ -1,11 +1,12 @@
 package com.example.kaamkaro.screens
 
+import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.ViewModel
 import com.example.kaamkaro.model.TodoList
 
 class ToDoViewModel: ViewModel() {
 
-    private var todoList = mutableListOf<TodoList>()
+    private var todoList = mutableStateListOf<TodoList>()
 
     fun getTasks(): List<TodoList> {
         return todoList
